@@ -1,0 +1,4 @@
+cfbd
+pandas
+pyarrow
+python-dotenv
