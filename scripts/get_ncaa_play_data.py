@@ -4,7 +4,7 @@ College Football Data API Collector
 Collect FBS play-by-play data and save as parquet files
 
 Usage:
-    python get_play_data.py --year 2023
+    python get_ncaa_play_data.py --year 2023
 
 Prerequisites:
     pip install requests pandas pyarrow python-dotenv
@@ -165,7 +165,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="Collect NCAA FBS play-by-play data and save as parquet files.")
     parser.add_argument("--year", type=int, required=True, help="Season year (e.g. 2023, 2024, 2025)")
-    parser.add_argument("--output_dir", type=str, default="data", help="Output directory for parquet files")
+    parser.add_argument("--output_dir", type=str, default="dfl_free_ncaa/data", help="Output directory for parquet files")
     parser.add_argument("--delay", type=float, default=0.1, help="Delay between API calls (seconds)")
     args = parser.parse_args()
 
