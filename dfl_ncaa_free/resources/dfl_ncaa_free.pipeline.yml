@@ -1,0 +1,13 @@
+# The main pipeline for dfl_ncaa_free
+resources:
+  pipelines:
+    dfl_ncaa_free_pipeline:
+      name: dfl_ncaa_free_pipeline
+      catalog: workspace
+      schema: dfl_ncaa_free_${bundle.target}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src
